@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iglesia Hefzi-bá</title>
+  <!-- Fuente Libre Baskerville desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="IMG/logo.png">
+
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" 
+    rel="stylesheet"
+  >
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="Stiles-and-Scripts/style.css" />
+</head>
+<body>
+  <!-- Encabezado y menú -->
+  <header>
+    <nav>
+      <div class="logo-container">
+        <!-- Logo de la Iglesia -->
+        <img src="IMG/logo.png" alt="Logo Iglesia Hefzi-bá" class="logo" />
+        <h1>Iglesia Cristiana Bíblica Hefzi-bá</h1>
+      </div>
+
+      <!-- Ícono menú (hamburguesa) para móviles -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Lista de enlaces del menú -->
+      <ul id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#horarios">Horarios y Actividades</a></li>
+        <li><a href="#ministerios">Ministerios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de Inicio -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-header">
+        <!-- Nuevo logo largo, se ubicará a la derecha del h2 -->
+        <img src="IMG/logotipo.png" alt="Logotipo" class="hero-logo-long">
+        
+        <h2>Colosenses 3:23</h2>
+        
+      </div>
+      <!-- La cita se mostrará debajo del encabezado -->
+      <p>Y todo lo que hagáis, hacedlo de corazón, como para el Señor y no para los hombres.</p>
+    </div>
+  </section>
+  
+
+  <!-- Sección Sobre Nosotros -->
+  <section id="sobre-nosotros">
+    <h2>Sobre Nosotros</h2>
+    <div class="info-container">
+      <p>
+        <strong>Historia breve:</strong> Nuestra congregación inicia con un pequeño grupo de hermanos 
+        en búsqueda de servir y aprender más del Señor. El 11 de febrero del 2020 se formaliza un 
+        espacio para congregarnos y compartir el estudio de las Sagradas Escrituras. La familia fue 
+        creciendo día con día. Recibimos nuestra personería jurídica el 5 de mayo del 2023; nos 
+        centramos en la formación espiritual en las familias, mostrar el amor de Cristo para 
+        salvarnos y la necesidad de vivir para servirle esparciendo la buena semilla del evangelio.
+      </p>
+      <p>
+        <strong>Declaración de fe:</strong> Nuestra convicción y creencias están basadas en la 
+        plenitud de las Escrituras. Creemos en el Padre, Hijo y Espíritu Santo como un solo Dios, 
+        confesamos que Jesús es nuestro único y suficiente salvador, quien a través de la 
+        crucifixión y su resurrección nos libró del pecado y la muerte y por ello somos salvos. 
+        Creemos que la salvación es por gracia, no por obras, pero la fe sin obras es muerta. Por 
+        esa razón mostramos nuestro amor hacia Él trabajando en el cumplimiento de sus mandamientos 
+        (Juan 14:15).
+      </p>
+    </div>
+
+    <div class="pastor-info">
+      <h3>Equipo Pastoral</h3>
+      <p><strong>Pastor general:</strong> Arismendi Boada</p>
+      <!-- Espacio para la fotografía del pastor -->
+      <div class="img-placeholder">
+        [Espacio para fotografía del Pastor]
+      </div>
+    </div>
+
+    <div class="imagenes-iglesia">
+      <!-- Espacios para las imágenes que aún no tienes -->
+      <div class="img-placeholder">[Fachada de la iglesia]</div>
+      <div class="img-placeholder">[Interior del templo]</div>
+      <div class="img-placeholder">[Actividades comunitarias]</div>
+    </div>
+  </section>
+
+  <!-- Sección Horarios y Actividades -->
+  <section id="horarios">
+    <h2>Horarios y Actividades</h2>
+    <ul class="horarios-list">
+      <li><strong>Culto</strong> - Domingos, 10:00 am</li>
+      <li><strong>Culto</strong> - Jueves, 7:00 pm</li>
+      <li><strong>Ayuno</strong> - Sábados, 9:00 am</li>
+      <li><strong>Clase Jóvenes</strong> - Sábados, 4:00 pm</li>
+      <li><strong>Ensayo de Alabanza</strong> - Sábados, 12:00 pm</li>
+    </ul>
+
+    <h3>Actividades semanales</h3>
+    <p><strong>Grupo de oración:</strong> Martes, 5:00 am</p>
+  </section>
+
+  <!-- Sección Ministerios -->
+  <section id="ministerios">
+    <h2>Ministerios</h2>
+    <div class="ministerio">
+      <h3>1) Alabanza</h3>
+      <p>
+        Unión de personas comprometidas en la adoración a Dios a través de la música.
+      </p>
+    </div>
+    <div class="ministerio">
+      <h3>2) Jóvenes</h3>
+      <p>
+        Labor espiritual enfocada a los jóvenes para que conozcan a su Creador en los días de su 
+        juventud y así, cuando vengan los días malos, tengan en Él su contentamiento.
+      </p>
+    </div>
+    <div class="ministerio">
+      <h3>3) Intercesión</h3>
+      <p>
+        Equipo de hermanos encargados de cercar e interceder en oración por las necesidades de la 
+        congregación.
+      </p>
+    </div>
+    <div class="ministerio">
+      <h3>4) Servidores</h3>
+      <p>
+        Diáconos preparados para la buena obra al servicio de Cristo y de la congregación.
+      </p>
+    </div>
+    <div class="ministerio">
+      <h3>5) Cocina</h3>
+      <p>
+        Grupo de hermanos que apoyan en el compartir de los alimentos en la congregación.
+      </p>
+    </div>
+    <div class="ministerio">
+      <h3>6) Infantil</h3>
+      <p>
+        Labor realizada para la enseñanza de las Escrituras a los más pequeños, para que tengan la 
+        facilidad de acercarse a Dios desde su niñez.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>
+      <strong>Dirección física:</strong> 
+      <a href="https://maps.app.goo.gl/FLzv8wqSsKLVU8ZE6" target="_blank">
+        Cl. 65d Sur #79c48
+      </a>
+    </p>
+    <p><strong>Teléfono principal:</strong> 300 957 2013</p>
+    <p>
+      <strong>Correo electrónico oficial:</strong> 
+      <a href="mailto:i.c.Hefziba624@gmail.com">i.c.Hefziba624@gmail.com</a>
+    </p>
+    <p>
+      <strong>Redes sociales:</strong><br />
+      <a href="https://www.facebook.com/hefziba.iglesia.3" target="_blank">
+        Facebook
+      </a><br />
+      <a href="https://www.youtube.com/@hefzibaiglesiacristiana802" target="_blank">
+        YouTube
+      </a>
+    </p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Iglesia Cristiana Bíblica Hefzi-bá © 2023</p>
+  </footer>
+
+  <!-- Archivo JavaScript externo -->
+  <script src="Stiles-and-Scripts/script.js"></script>
+</body>
+</html>
