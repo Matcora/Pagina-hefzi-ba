@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web oficial de la Iglesia Cristiana Hefzi-bà.">
+    <title>Iglesia Cristiana Hefzi-bá</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Montserrat:wght@500;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- PANEL DE ACCESIBILIDAD Y ADMIN -->
+    <div class="a11y-panel">
+        <button class="a11y-btn" id="btn-theme" title="Cambiar contraste">🌓</button>
+        <button class="a11y-btn" id="btn-text-minus" title="Reducir letra">A-</button>
+        <button class="a11y-btn" id="btn-text-plus" title="Aumentar letra">A+</button>
+        <button class="a11y-btn" id="btn-admin" title="Panel de Administración (Devocionales)">🔒</button>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">HEFZI-BÁ</a>
+            <!-- Botón Hamburguesa -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="main-menu" class="nav-menu">
+                <li><a href="#inicio" class="active-link">Inicio</a></li>
+                <li><a href="#biblia">La Biblia</a></li>
+                <li><a href="#devocionales">Devocionales</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MODAL DE ADMINISTRACIÓN -->
+    <div id="modal-password" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Seguridad de la Iglesia</h3>
+            <p>Por favor, ingresa tus credenciales de administrador.</p>
+            <input type="email" id="admin-email-input" placeholder="Correo electrónico">
+            <input type="password" id="admin-pass-input" placeholder="Contraseña de acceso">
+            <p id="admin-pass-error" class="msg-error">Contraseña incorrecta. Intenta nuevamente.</p>
+            <div style="display: flex; gap: 10px; margin-top: 1rem;">
+                <button id="btn-modal-submit" class="btn-rojo" style="flex: 1; padding: 0.8rem;">Entrar</button>
+                <button id="btn-modal-cancel" class="btn-rojo" style="flex: 1; padding: 0.8rem; background-color: var(--color-secundario);">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE ALERTAS PERSONALIZADAS -->
+    <div id="modal-alert" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modal-alert-title" style="color: var(--rojo-principal); margin-bottom: 1rem; font-family: var(--fuente-titulos);">Aviso</h3>
+            <p id="modal-alert-message" style="color: var(--texto-secundario); margin-bottom: 1.5rem; font-size: 0.95rem;">Mensaje de alerta</p>
+            <div style="display: flex; gap: 10px; margin-top: 1rem;">
+                <button id="btn-alert-ok" class="btn-rojo" style="flex: 1; padding: 0.8rem;">Aceptar</button>
+                <button id="btn-alert-cancel" class="btn-rojo" style="flex: 1; padding: 0.8rem; background-color: var(--color-secundario); display: none;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <main style="margin-top: 80px;">
+        
+        <!-- ==========================================
+             VISTA: INICIO
+             ========================================== -->
+        <div id="inicio" class="page-view active">
+            
+            <section class="hero reveal">
+                <div class="hero-content">
+                    <h1>Y todo lo que hagáis, hacedlo de corazón, como para el Señor y no para los hombres.</h1>
+                    <p class="cita-ref">Colosenses 3:23</p>
+                </div>
+            </section>
+
+            <section class="section-padding container">
+                
+                <div class="split-section reveal">
+                    <div class="split-text">
+                        <h3>Nuestra Historia</h3>
+                        <p>Nuestra congregación inicia con un pequeño grupo de hermanos en búsqueda de servir y aprender más del Señor. El 11 de febrero del 2020 se formaliza un espacio para congregarnos y compartir el estudio de las Sagradas Escrituras.</p>
+                        <p>Recibimos nuestra personería jurídica el 5 de mayo del 2023; nos centramos en la formación espiritual en las familias, mostrar el amor de Cristo para salvarnos y esparcir la buena semilla del evangelio.</p>
+                    </div>
+                    <div class="carousel-container" id="carousel-historia">
+                        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1438283173091-5dbf5c5a3206?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?auto=format&fit=crop&q=80&w=800');"></div>
+                    </div>
+                </div>
+
+                <div class="split-section split-reverse reveal">
+                    <div class="split-text">
+                        <h3>Declaración de Fe</h3>
+                        <p>Nuestra convicción está basada en la plenitud de las Escrituras. Creemos en el Padre, Hijo y Espíritu Santo como un solo Dios, confesamos que Jesús es nuestro único y suficiente salvador.</p>
+                        <p>Creemos que la salvación es por gracia, no por obras, pero la fe sin obras es muerta. Trabajamos en el cumplimiento de sus mandamientos (Juan 14:15).</p>
+                    </div>
+                    <div class="carousel-container" id="carousel-fe">
+                        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&q=80&w=800');"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding container reveal">
+                <h2 class="titulo-seccion">Conócenos</h2>
+                <div class="tablero-corcho">
+                    
+                    <div class="nota-adhesiva">
+                        <h3>Horarios</h3>
+                        <ul>
+                            <li><strong>Culto General:</strong> Domingos 10:00 am</li>
+                            <li><strong>Enseñanza:</strong> Jueves 7:00 pm</li>
+                            <li><strong>Ayuno:</strong> Sábados 9:00 am</li>
+                            <li><strong>Jóvenes:</strong> Sábados 3:00 pm</li>
+                        </ul>
+                    </div>
+
+                    <div class="nota-adhesiva">
+                        <h3>Misión</h3>
+                        <p>Formar servidores de Cristo que pasen por las puertas, que barran el camino al pueblo del Señor, allanando la calzada, quitando las piedras, alzando el pendón a fin de que se restablezca el Reino de Dios.</p>
+                    </div>
+
+                    <div class="nota-adhesiva">
+                        <h3>Visión</h3>
+                        <p>Ver a los hombres resplandeciendo en la justicia de Dios y que la salvación de Jesucristo se encienda como una antorcha. Pues he aquí viene nuestro Salvador.</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             VISTA: LA BIBLIA (Selección por Rango y Único)
+             ========================================== -->
+        <div id="biblia" class="page-view">
+            <section class="section-padding container">
+                <h2 class="titulo-seccion"> Mas Adelante</h2>
+                <!--<h2 class="titulo-seccion">Lee y Escucha</h2>
+                
+                <div class="biblia-layout">
+                    <div class="biblia-panel-control">
+                        <h3>Selección</h3>
+                        
+                        <div class="modos-lectura">
+                            <button id="btn-modo-unico" class="btn-modo activo">Capítulo Único</button>
+                            <button id="btn-modo-rango" class="btn-modo inactivo">Por Rango</button>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label>Libro:</label>
+                            <select id="sel-libro"><option value="">Cargando...</option></select>
+                        </div>
+                        <div class="control-group">
+                            <label id="lbl-cap-inicio">Capítulo:</label>
+                            <select id="sel-cap-inicio" disabled><option value="">-</option></select>
+                        </div>
+                        <div class="control-group" id="grupo-cap-fin" style="display: none;">
+                            <label>Hasta el Capítulo:</label>
+                            <select id="sel-cap-fin" disabled><option value="">-</option></select>
+                        </div>
+                        
+                        <button id="btn-reproducir-rango" class="btn-rojo" style="margin-top: 1rem;">Escuchar Capítulo</button>
+                    </div>
+
+                    <div class="biblia-lector">
+                        <div class="audio-wrapper">
+                            <h4 id="audio-titulo">Selecciona tu lectura para comenzar</h4>
+                            <audio id="reproductor-biblia" controls></audio>
+                        </div>
+
+                        <div id="texto-biblia-display">
+                            <h2 style="text-align: center; font-size: 4rem; color: var(--bg-seccion); margin: 2rem 0;">📖</h2>
+                            <p style="text-align: center; color: var(--texto-secundario);">El texto bíblico aparecerá aquí.</p>
+                        </div>
+                    </div>
+                </div>-->
+            </section>
+        </div>  
+
+        <!-- ==========================================
+             VISTA: DEVOCIONALES
+             ========================================== -->
+        <div id="devocionales" class="page-view">
+            <section class="section-padding container">
+                
+                <div class="devocional-header">
+                    <h2 class="titulo-seccion" style="margin:0;">Devocionales Diarios</h2>
+                    <div class="filtro-fecha">
+                        <label for="buscar-fecha" style="font-family: var(--fuente-titulos); font-weight: bold;">Buscar por fecha:</label>
+                        <input type="date" id="buscar-fecha">
+                    </div>
+                </div>
+
+                <!-- PANEL DE ADMINISTRADOR OCULTO (Para crear devocionales) -->
+                <div id="admin-panel" style="display: none; background: var(--bg-elemento); padding: 2.5rem 2rem; border-radius: var(--radio-bordes); margin-bottom: 2.5rem; border: 2px solid var(--rojo-principal); box-shadow: 0 10px 30px var(--sombra);">
+                    <h3 style="color: var(--rojo-principal); margin-bottom: 1rem; font-size: clamp(1.5rem, 4vw, 1.8rem);">Administración: Publicar Nuevo Devocional</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--texto-secundario);">Ingresa los datos y la fecha para que el devocional se guarde en la base de datos de la iglesia.</p>
+                    
+                    <label style="font-weight: bold; margin-bottom: 0.5rem; display: block;">Fecha de Publicación:</label>
+                    <input type="date" id="dev-admin-fecha">
+                    
+                    <input type="text" id="dev-admin-titulo" placeholder="Título (Ej: La Paz en la Tormenta)">
+                    <input type="text" id="dev-admin-cita" placeholder="Cita Bíblica (Ej: Juan 3:16)">
+                    <textarea id="dev-admin-texto" placeholder="Escribe la enseñanza o reflexión del día aquí..." rows="5"></textarea>
+                    
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button id="btn-guardar-dev" class="btn-rojo" style="flex: 1; padding: 1rem;">Guardar y Publicar</button>
+                        <button id="btn-cerrar-admin" class="btn-rojo" style="background-color: var(--color-secundario); padding: 1rem; flex: 1;">Cerrar Panel</button>
+                        <button id="btn-logout-admin" class="btn-rojo" style="background-color: #555; padding: 1rem; flex: 1; display: none;">Cerrar Sesión</button>
+                    </div>
+                </div>
+
+                <div id="devocional-display">
+                    <div class="devocional-view" style="text-align: center;">
+                        <p>Selecciona una fecha en el calendario superior para leer el devocional.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             VISTA: CONTACTO (Envío Automático Ajax)
+             ========================================== -->
+        <div id="contacto" class="page-view">
+            <section class="section-padding container">
+                <div class="contacto-layout">
+                    <div class="contacto-info reveal">
+                        <h2 style="font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; font-family: var(--fuente-titulos);">Hablemos.</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Estamos aquí para escucharte, orar por ti y recibirte en nuestra familia espiritual.</p>
+                        
+                        <div class="info-item">
+                            <strong>Línea Directa</strong>
+                            <span style="font-size: clamp(1.2rem, 4vw, 1.5rem);">300 957 20 13</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Nuestra Casa</strong>
+                            <span>Calle 65d sur # 79c - 26<br>Bosa centro, 3er piso<br>Bogotá, Colombia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-form-container reveal">
+                        <h3 style="margin-bottom: 1rem; font-size: clamp(1.5rem, 5vw, 2rem);">Envíanos un mensaje</h3>
+                        <p style="margin-bottom: 2rem; color: var(--texto-secundario); font-size: 0.95rem;">
+                            Déjanos tu petición u observaciones. Tu mensaje será enviado directamente y de forma segura al equipo de nuestra iglesia.
+                        </p>
+                        
+                        <!-- FORMULARIO DIRECTO VÍA AJAX -->
+                        <form id="formulario-contacto">
+                            <input type="text" id="contacto-nombre" placeholder="Tu Nombre Completo" required>
+                            <input type="email" id="contacto-correo" placeholder="Tu Correo Electrónico" required>
+                            <textarea id="contacto-mensaje" rows="5" placeholder="¿En qué podemos ayudarte o por qué motivo quieres que oremos?" required></textarea>
+                            
+                            <button type="submit" id="btn-enviar-contacto" class="btn-rojo">Enviar Mensaje</button>
+                            
+                            <!-- Mensaje de confirmación -->
+                            <div id="mensaje-exito" class="mensaje-exito">
+                                ¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos pronto.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- LÓGICA JAVASCRIPT -->
+    <script type="module" src="js/app.js" defer></script>
+</body>
+</html>
